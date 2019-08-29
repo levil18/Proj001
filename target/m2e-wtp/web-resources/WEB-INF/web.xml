@@ -1,0 +1,17 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <display-name>Servlet de Teste </display-name>
+    <servlet>
+        <servlet-name>App</servlet-name>
+        <servlet-class>com.teste.leonardo.App</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>App</servlet-name>
+        <url-pattern>/app</url-pattern>
+    </servlet-mapping>
+
+</web-app>
