@@ -17,9 +17,9 @@
 		<button id="encurtador">Encurtar</button>
 	  </div>
 	  <section id="section">
-	  Short Code: <s:property value="App.URL_OR" /> <br />
-	Original URL: <s:property value="App.URL_CUT" /> <br />
-	Created On: <s:property value="App.Id_USR" /> <br />
+	  Encurtada: <s:property value="App.URL_OR" /> <br />
+	Original : <s:property value="App.URL_CUT" /> <br />
+	Usuário: <s:property value="App.Id_USR" /> <br />
 	</section>
 	</main>
 	<link rel="stylesheet" href="CSS/boilerplate.min.css" type="text/css">
