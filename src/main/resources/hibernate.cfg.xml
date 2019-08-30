@@ -11,13 +11,13 @@
                              com.mysql.jdbc.Driver
                </property>
                <property name = "hibernate.connection.url">
-                             jdbc:mysql://localhost:3306/encurtadb
+                             jdbc:mysql://localhost:3306/test
                </property>
                <property name = "hibernate.connection.username">
-                             tester
+                             root
                </property>
                <property name = "hibernate.connection.password">
-                             admin
+                             
                </property>
                <property name="hibernate.show_sql">
                              true
