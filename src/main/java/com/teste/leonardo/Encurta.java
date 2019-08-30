@@ -4,10 +4,16 @@ package com.teste.leonardo;
 import java.util.HashMap;
 import java.util.Random;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 
 
+@Entity
+@Table(name = "URL")
 public class Encurta {
 	// storage for generated keys
 	private HashMap<String, String> mapeiaKey; // mapeamento de chave e url
@@ -15,12 +21,29 @@ public class Encurta {
 	private String dominio; // variável para gerar URL, padrão: http://levil.com.br
 	private char caracteres[]; // array de caracteres inclui minusculas, mauisculas e numeros 
 	private String busca = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	//ex: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 	private Random aleatorio; // gerador de números aleatórios
 	private int tamKey; // refere-se ao tamanho da chave
 	int counter = 0;
+
+	@Id
 	private String hash;
+
+	@Column(name = "url_original", nullable = false)
 	private String original;
+
+	@Column(name = "ID_usr", nullable = false)
 	private Integer usuario;
+
+	public void setHash(String HASH) {
+		this.hash = HASH;
+	}
+	public void setURL(String URL) {
+		this.original = URL;
+	}
+	public void setId(Integer id) {
+		this.usuario = id;
+	}
 
 	// versão padrão
 	Encurta() {
@@ -54,6 +77,9 @@ public class Encurta {
 		} else {
 			novaUrl = dominio + "/" + pegaKey(urlAtual);
 		}
+		setURL(urlAtual);
+		setHash(novaUrl);
+		setId(1);
 		return novaUrl;
 	}
 
